@@ -9,13 +9,21 @@
 const positiveNumber = 0
 
 function myButtonClicked() {
-  const positiveNumber = document.getElementById("positive-option").checked
-  if (positiveNumber==true) {
-    const randomNumber = Math.floor(Math.random() * 6) + 1
-  } 
-  else {
-    const randomNumber = Math.floor(Math.random() * -6) + 1
+  const ageNumber = document.getElementById("age-number").value
+  if (ageNumber >= 17) {
+    document.getElementById("answer").innerHTML = 
+      "<p>You can see an R rated movie alone</p>"
   }
-  document.getElementById("answer").innerHTML = 
-    "<p>The random number is: </p>" + randomNumber + "</p>"
+  else if (ageNumber >= 13) {
+    document.getElementById("answer").innerHTML = 
+      "<p>You can go see a PG-13 movie alone</p>"
+  }
+  else if (ageNumber >= 5) {
+    document.getElementById("answer").innerHTML = 
+      "<p>You can go see a G or PG movie alone</p>"
+  }
+  else {
+    document.getElementById("answer").innerHTML = 
+      "<p>You're too young to watch any movie alone</p>"
+  }
 }

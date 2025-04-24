@@ -3,7 +3,7 @@
 <html lang="en-ca">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="positive or negative value program" />
+    <meta name="description" content="movie age rating program" />
     <meta name="keywords" content="ICD2O, mths" />
     <meta name="author" content="Aimar Fernandez" />
     <meta name="viewport" content="width+device-width, initial-scale=.1.0" />
@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <title>Positive or Negative Value Program</title>
+    <title>Movie Age Rating Program</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -30,52 +30,36 @@
         <br />
         <div class="mdl_layout__header-row">
           <span class="mdl-layout-title"
-            >Positive or Negative Value Program</span
+            >Movie Age Rating Program</span
           >
         </div>
       </header>
       <main class="mdl-layout__content">
         <div>
           <img
-            src="./images/positive_negative.jpg"
-            alt="positive or negative numbers"
+            src="./images/movie_ratings.jpg"
+            alt="movie ratings"
           />
         </div>
         <br />
         <div class="page-content">
-          Select what kind of number you would like
+          Enter in your age
         </div>
         <br />
         <form action="#">
-          <!-- MDL Radio -->
-          <label
-            class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-            for="positive-option"
+          <!-- Textfield -->
+          <div
+            class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
           >
             <input
-              type="radio"
-              id="positive-option"
-              class="mdl-radio__button"
-              name="number-kind"
-              value="1"
-              checked
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="age-number"
             />
-            <span class="mdl-radio__label">Positive</span>
-          </label>
-          <label
-            class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-            for="negative-option"
-          >
-            <input
-              type="radio"
-              id="negative-option"
-              class="mdl-radio__button"
-              name="number-kind"
-              value="2"
-            />
-            <span class="mdl-radio__label">Negative</span>
-          </label>
-          <br />
+            <label class="mdl-textfield__label" for="sample4"> Age...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
           <br />
           <!-- Raised button with ripple -->
           <button
@@ -83,7 +67,7 @@
             onclick="myButtonClicked()"
             type="button"
           >
-            Generate
+            Find Movie Type
           </button>
         </form>
         <br />
